@@ -13,4 +13,11 @@ public class BookStoreApplication  {
     public List<Book> getAllBooks() {
         return allBooks;
     }
+
+    public Book findBookById(int id) {
+        for (Book book : allBooks) {
+            if (id == book.getId()) return book;
+        }
+        throw new BookNotFoundException("Can not find book with id '" + id + "'");
+    }
 }
