@@ -1,7 +1,7 @@
 package bookshop.web;
 
-import bookshop.BookStoreApplication;
 import bookshop.Book;
+import bookshop.BookStoreApplication;
 import static bookshop.Pounds.inPounds;
 
 import javax.servlet.*;
@@ -21,8 +21,11 @@ public class ApplicationFilter implements Filter {
             request.getSession().setAttribute("application", createBookStoreApplication());
         }
         filterChain.doFilter(request, servletResponse);
-        filterConfig.getServletContext().getRequestDispatcher("/WEB-INF/application_layout.jsp").forward(request, servletResponse);
-
+        if (!servletResponse.isCommitted()) {
+            filterConfig.getServletContext()
+                    .getRequestDispatcher("/WEB-INF/application_layout.jsp")
+                    .forward(request, servletResponse);
+        }
     }
 
     public void destroy() {
@@ -55,7 +58,7 @@ public class ApplicationFilter implements Filter {
                 .withTitle("Harry Potter and the Prisoner of Azkaban")
                 .withAuthor("J. K. Rowling")
                 .withDescription("Harry Potter and the Prisoner of Azkaban is the third novel in the Harry Potter series written by J. K. Rowling. The book was published on 8 July 1999. The novel won both the 1999 Costa Book Awards and the Bram Stoker Award, and was short-listed for other awards, placing it among the most-honoured works of fantasy in recent history.[1] A film based on the book was released on 31 May 2004, in the United Kingdom and 4 June 2004 in the U.S. and many other countries.")
-                 .atPrice(inPounds(4.49)));
+                .atPrice(inPounds(4.49)));
         result.addBook(new Book(6)
                 .withTitle("Harry Potter and the Goblet of Fire")
                 .withAuthor("J. K. Rowling")
@@ -71,10 +74,10 @@ public class ApplicationFilter implements Filter {
                 .withDescription("Harry Potter and the Half-Blood Prince, released on 16 July 2005, is the sixth of seven novels in J. K. Rowling's popular Harry Potter series. Set during Harry Potter's sixth year at Hogwarts, the novel explores Lord Voldemort's past, and Harry's preparations for the final battle amidst emerging romantic relationships and the emotional confusions and conflict resolutions characteristic of mid-adolescence.")
                 .atPrice(inPounds(6.29)));
         result.addBook(new Book(9)
-                    .withTitle("Harry Potter and the Deathly Hallows")
-                    .withAuthor("J. K. Rowling")
-                    .withDescription("arry Potter and the Deathly Hallows is the seventh and final of the Harry Potter novels written by British author J. K. Rowling. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. This book chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and leads to the long-awaited final confrontation between Harry Potter and Lord Voldemort.")
-                    .atPrice(inPounds(5.99)));
-            return result;
+                .withTitle("Harry Potter and the Deathly Hallows")
+                .withAuthor("J. K. Rowling")
+                .withDescription("arry Potter and the Deathly Hallows is the seventh and final of the Harry Potter novels written by British author J. K. Rowling. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. This book chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and leads to the long-awaited final confrontation between Harry Potter and Lord Voldemort.")
+                .atPrice(inPounds(5.99)));
+        return result;
     }
 }

@@ -1,8 +1,7 @@
 package bookshop.web;
 
 import bookshop.BookStoreApplication;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import testutil.servlet.*;
@@ -67,6 +66,16 @@ public class TestApplicationFilter {
 
     }
 
+
+    @Test
+    public void shouldNotForwardIfResponseIsCommitted() throws Exception {
+        stubHttpServletResponse.committed = true;
+        testee.doFilter(stubHttpServletRequest.asHttpServletRequest(),
+                stubHttpServletResponse.asHttpServletResponse(),
+                stubFilterChain.asFilterChain());
+        assertNull(stubServletContext.forwardedPath);
+
+    }
 
 
 }
