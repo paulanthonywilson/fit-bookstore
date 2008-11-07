@@ -24,7 +24,7 @@ public class TestDisplayCatalogueServlet {
         request = new StubHttpServletRequest();
         request.setMethod("GET");
         BookStoreApplication storeApplication = new BookStoreApplication();
-        storeApplication.addBook(new Book().withTitle("Around the world in 80 days"));
+        storeApplication.addBook(new Book(1).withTitle("Around the world in 80 days"));
         request.getSession().setAttribute("application", storeApplication);
         testee = new DisplayCatalogueServlet();
     }
