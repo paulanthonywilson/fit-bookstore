@@ -13,11 +13,20 @@
         <servlet-name>DisplayCatalogue</servlet-name>
         <servlet-class>bookshop.web.DisplayCatalogueServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DisplayBook</servlet-name>
+        <servlet-class>bookshop.web.DisplayBookServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
         <servlet-name>DisplayCatalogue</servlet-name>
         <url-pattern>/store/catalogue</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DisplayBook</servlet-name>
+        <url-pattern>/store/book</url-pattern>
     </servlet-mapping>
 
     <filter-mapping>

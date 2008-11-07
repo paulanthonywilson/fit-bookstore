@@ -1,15 +1,38 @@
-html{
+html {
     font-size: 62.5%;
+    text-align: left;
 }
 
-div.book{
+div.book {
     float: left;
     height: 220px;
     width: 160px;
     padding: 5px;
 }
 
-div.book img{
-    height:200px;
+div.book img {
+    height: 200px;
+}
 
+.displaybook {
+    padding: 5em 3em;
+    text-align: left;
+}
+
+.displaybook h1, .displaybook p {
+    margin: 3em 1em 0 0;
+}
+
+.displaybook h1 {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.displaybook img.book {
+    float: right;
+    margin: 0 0 0 3em
+}
+
+em{
+    font-weight: bolder;
 }
