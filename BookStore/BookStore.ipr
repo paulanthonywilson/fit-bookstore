@@ -16,7 +16,7 @@
   </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <option name="DEPLOY_AFTER_MAKE" value="0" />
+    <option name="DEPLOY_AFTER_MAKE" value="1" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -225,7 +225,7 @@
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Store/Store.iml" filepath="$PROJECT_DIR$/Store/Store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Store/StoreWeb.iml" filepath="$PROJECT_DIR$/Store/StoreWeb.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="1.5" project-jdk-type="JavaSDK">
@@ -252,5 +252,25 @@
     <mapping directory="" vcs="" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="junit">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/junit4.5/junit-4.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/junit4.5/junit-4.5-src.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="jstl">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/lib/jstl-1.2/jstl-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$PROJECT_DIR$/lib/jstl-1.2/jstl-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
 </project>
 

@@ -1,0 +1,15 @@
+html{
+    font-size: 62.5%;
+}
+
+div.book{
+    float: left;
+    height: 220px;
+    width: 160px;
+    padding: 5px;
+}
+
+div.book img{
+    height:200px;
+
+}

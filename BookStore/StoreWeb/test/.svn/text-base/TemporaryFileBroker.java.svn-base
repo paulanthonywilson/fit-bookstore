@@ -1,0 +1,74 @@
+package com.cogenttps.common.testing;
+
+import com.cogenttps.common.io.*;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * 
+ */
+public class TemporaryFileBroker
+{
+    private Collection<File> filesToDeleteOnTearDown;
+
+
+    public void deleteMeOnTearDown(File file)
+    {
+        if (filesToDeleteOnTearDown == null)
+        {
+            filesToDeleteOnTearDown = new ArrayList<File>();
+        }
+        filesToDeleteOnTearDown.add(file);
+    }
+
+    public void tearDown() throws Exception
+    {
+        deleteTearDownFiles();
+    }
+
+    protected void deleteTearDownFiles()
+    {
+        if (filesToDeleteOnTearDown != null)
+        {
+            for (File file : filesToDeleteOnTearDown)
+            {
+                try
+                {
+                    FileUtils.delete(file);
+                }
+                catch (IOException e)
+                {
+                    // ignore
+                }
+            }
+            filesToDeleteOnTearDown.clear();
+        }
+    }
+
+    public File tempFile() throws IOException
+    {
+        return ensureFileCleanedUp(File.createTempFile("test", ""));
+    }
+
+    public File tempFile(File directory) throws IOException
+    {
+        return ensureFileCleanedUp(File.createTempFile("test", "", directory));
+    }
+
+    public File ensureFileCleanedUp(File result)
+    {
+        deleteMeOnTearDown(result);
+        result.deleteOnExit();
+        return result;
+    }
+
+
+    public File tempDir() throws IOException
+    {
+        File result = tempFile();
+        result.delete();
+        result.mkdirs();
+        return result;
+    }
+}

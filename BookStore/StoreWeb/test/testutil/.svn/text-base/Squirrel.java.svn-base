@@ -1,0 +1,21 @@
+package com.cogenttps.common.testing;
+
+/**
+ */
+public interface Squirrel
+{
+    void climbTree();
+
+    void hideNuts();
+
+    void hideNuts(int count);
+
+    int getHiddentNutsCount();
+
+    void jumpToTheBlueTree();
+
+    void doSquirrelDance() throws TooTiredToDanceException;
+
+    Object jumpToTheRedTree();
+
+}

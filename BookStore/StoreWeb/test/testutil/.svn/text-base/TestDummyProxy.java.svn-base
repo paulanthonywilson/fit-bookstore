@@ -1,0 +1,126 @@
+package com.cogenttps.common.testing;
+
+import junit.framework.*;
+
+/**
+ */
+public class TestDummyProxy extends TestCase
+{
+    private boolean treeClimbed;
+    private int nutsHidden;
+
+    protected void setUp() throws Exception
+    {
+        treeClimbed = false;
+        nutsHidden = 0;
+    }
+
+    public void testImplementsInterface() throws Exception
+    {
+        Squirrel squirrel = DummyProxy.dummy(Squirrel.class, this);
+        assertNotNull(squirrel);
+    }
+
+    public void testCallMethod() throws Exception
+    {
+        testeeProxy().climbTree();
+        assertEquals("Tree climbed", true, treeClimbed);
+    }
+
+    public void testOverloadedMethod() throws Exception
+    {
+        testeeProxy().hideNuts();
+        assertEquals(1, nutsHidden);
+        testeeProxy().hideNuts(2);
+        assertEquals(3, nutsHidden);
+    }
+
+    public void testReturnValue() throws Exception
+    {
+        nutsHidden = 5;
+        assertEquals(5, testeeProxy().getHiddentNutsCount());
+    }
+
+    public void testRuntimeException() throws Exception
+    {
+        try
+        {
+            testeeProxy().jumpToTheBlueTree();
+            fail("Expecting UnsupportedOperationException");
+        }
+        catch (UnsupportedOperationException e)
+        {
+
+        }
+    }
+
+
+    public void testNotImplementedInPartialImplementation() throws Exception
+    {
+        try
+        {
+            testeeProxy().jumpToTheRedTree();
+            fail("Expecting UnsupportedOperationException");
+        }
+        catch (UnsupportedOperationException e)
+        {
+
+        }
+    }
+
+    public void testCheckedException() throws Exception
+    {
+        try
+        {
+            testeeProxy().doSquirrelDance();
+            fail("Expecting TooTiredtoDanceException");
+        }
+        catch (TooTiredToDanceException e)
+        {
+
+        }
+    }
+
+
+    public void jumpToTheBlueTree() throws UnsupportedOperationException
+    {
+        throw new UnsupportedOperationException("jumpToTheBlueTree");
+    }
+
+    public void doSquirrelDance() throws TooTiredToDanceException
+    {
+        throw new TooTiredToDanceException();
+    }
+
+    public void climbTree()
+    {
+        treeClimbed = true;
+    }
+
+    public void hideNuts(int count)
+    {
+        nutsHidden += count;
+    }
+
+    public void hideNuts()
+    {
+        nutsHidden++;
+    }
+
+    public int getHiddentNutsCount()
+    {
+        return nutsHidden;
+    }
+
+
+    public void testReturnsNullOnUnrecognisedMethodsProxy() throws Exception
+    {
+        Squirrel testee = DummyProxy.dummyReturningNullOnUnrecognised(Squirrel.class, this);
+        assertNull(testee.jumpToTheRedTree());
+    }
+
+    private Squirrel testeeProxy()
+    {
+        return DummyProxy.dummy(Squirrel.class, this);
+    }
+}

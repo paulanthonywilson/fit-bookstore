@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="737"
+   name=""
+   committed-date="2007-03-19T17:59:15.017375Z"
+   url="http://svn.versiondude.net/cogent/Cogent/westinharbour/utility/src/com/cogenttps/common/testing"
+   last-author="paulwilson"
+   kind="dir"
+   uuid="8f4011f6-bd01-0410-915a-86cb326b9b6f"
+   repos="http://svn.versiondude.net/cogent/Cogent"
+   revision="1083"/>
+<entry
+   committed-rev="627"
+   name="TemporaryFileBroker.java"
+   text-time="2007-04-02T10:36:41.000000Z"
+   committed-date="2006-12-07T13:00:59.850636Z"
+   checksum="d287c6b536709060addb6e39018eab02"
+   last-author="paulwilson"
+   kind="file"
+   prop-time="2007-04-02T10:36:41.000000Z"/>
+<entry
+   committed-rev="737"
+   name="DummyProxy.java"
+   text-time="2007-04-02T10:36:41.000000Z"
+   committed-date="2007-03-19T17:59:15.017375Z"
+   checksum="8ab82491cf662a7e69e97b14feff3b88"
+   last-author="paulwilson"
+   kind="file"
+   prop-time="2007-04-02T10:36:41.000000Z"/>
+</wc-entries>
