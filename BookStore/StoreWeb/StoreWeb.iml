@@ -28,6 +28,19 @@
             <attribute name="method" value="1" />
             <attribute name="URI" value="/WEB-INF/classes" />
           </containerElement>
+          <containerElement type="library" name="jstl" level="project">
+            <attribute name="method" value="1" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" name="junit" level="project">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="/WEB-INF/lib" />
+          </containerElement>
+          <containerElement type="library" level="module">
+            <attribute name="method" value="0" />
+            <attribute name="URI" value="&lt;N/A&gt;" />
+            <url>jar://$APPLICATION_HOME_DIR$/lib/javaee.jar!/</url>
+          </containerElement>
         </packaging>
       </configuration>
     </facet>
@@ -49,6 +62,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jstl" level="project" />
+    <orderEntry type="library" name="junit" level="project" />
     <orderEntryProperties />
   </component>
 </module>
