@@ -11,7 +11,7 @@ import testutil.servlet.StubHttpServletResponse;
 
 public class TestDisplayBookServlet {
     private StubHttpServletRequest request;
-    private BookStoreGetServlet testee;
+    private BookStoreServlet testee;
 
     @Before
     public void setUp() throws Exception {

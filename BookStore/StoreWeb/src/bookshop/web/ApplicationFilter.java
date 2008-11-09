@@ -62,7 +62,8 @@ public class ApplicationFilter implements Filter {
         result.addBook(new Book(6)
                 .withTitle("Harry Potter and the Goblet of Fire")
                 .withAuthor("J. K. Rowling")
-                .withDescription("Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series written by J. K. Rowling. Published on 8 July 2000, the release of this book was surrounded by more hype than any other book in recent times[citation needed]—outdone only by its successors, Harry Potter and the Order of the Phoenix, Harry Potter and the Half-Blood Prince and Harry Potter and the Deathly Hallows. The book attracted additional attention because of a pre-publication warning from J. K. Rowling that one of the characters would be murdered in the book."));
+                .withDescription("Harry Potter and the Goblet of Fire is the fourth novel in the Harry Potter series written by J. K. Rowling. Published on 8 July 2000, the release of this book was surrounded by more hype than any other book in recent times[citation needed]—outdone only by its successors, Harry Potter and the Order of the Phoenix, Harry Potter and the Half-Blood Prince and Harry Potter and the Deathly Hallows. The book attracted additional attention because of a pre-publication warning from J. K. Rowling that one of the characters would be murdered in the book.")
+                .atPrice(inPounds(9.74)));
         result.addBook(new Book(7)
                 .withTitle("Harry Potter and the Order of the Phoenix")
                 .withAuthor("J. K. Rowling")
@@ -76,7 +77,7 @@ public class ApplicationFilter implements Filter {
         result.addBook(new Book(9)
                 .withTitle("Harry Potter and the Deathly Hallows")
                 .withAuthor("J. K. Rowling")
-                .withDescription("arry Potter and the Deathly Hallows is the seventh and final of the Harry Potter novels written by British author J. K. Rowling. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. This book chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and leads to the long-awaited final confrontation between Harry Potter and Lord Voldemort.")
+                .withDescription("Harry Potter and the Deathly Hallows is the seventh and final of the Harry Potter novels written by British author J. K. Rowling. The book was released on 21 July 2007, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. This book chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and leads to the long-awaited final confrontation between Harry Potter and Lord Voldemort.")
                 .atPrice(inPounds(5.99)));
         return result;
     }

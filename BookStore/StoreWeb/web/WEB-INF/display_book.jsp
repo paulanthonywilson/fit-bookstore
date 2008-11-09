@@ -7,5 +7,9 @@
 <img class="book" src="${book.image}" alt="${book.title}"/>
 <h1>${book.title}</h1>
 <p class="description">${book.description}</p>
-<p class="price">Price: <em>£${book.price}</em></p>   
+<p class="price">Price: <em>£${book.price}</em></p>
+<form action="/store/addtocart" method="POST">
+    <input type="hidden" name="id" value="${book.id}"/>
+    <input type="submit" value="add to cart"/>
+</form>
 </div>

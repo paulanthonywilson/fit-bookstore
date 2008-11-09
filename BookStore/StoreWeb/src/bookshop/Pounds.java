@@ -18,4 +18,22 @@ public class Pounds {
     public String toString() {
         return value.toString();
     }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        return value.equals(((Pounds) o).value);
+
+    }
+
+    public int hashCode() {
+        return value.hashCode();
+    }
+
+    public Pounds plus(Pounds addMe) {
+        return new Pounds(value.add(addMe.value));
+    }
+
+
 }

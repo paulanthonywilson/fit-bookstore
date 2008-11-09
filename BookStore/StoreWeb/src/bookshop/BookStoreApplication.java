@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BookStoreApplication  {
     private List<Book> allBooks = new ArrayList<Book>() ;
+    private Cart cart = new Cart();
 
     public void addBook(Book book) {
         allBooks.add(book);
@@ -19,5 +20,10 @@ public class BookStoreApplication  {
             if (id == book.getId()) return book;
         }
         throw new BookNotFoundException("Can not find book with id '" + id + "'");
+    }
+
+
+    public Cart getCart() {
+        return cart;
     }
 }

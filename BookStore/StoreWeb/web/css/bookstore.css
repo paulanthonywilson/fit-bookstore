@@ -3,6 +3,16 @@ html {
     text-align: left;
 }
 
+
+#page{
+    clear: both;
+}
+
+
+#cart{
+    float:right;
+    margin: 1em 1em 2em;
+}
 div.book {
     float: left;
     height: 220px;

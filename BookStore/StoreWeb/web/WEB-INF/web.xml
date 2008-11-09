@@ -17,6 +17,10 @@
         <servlet-name>DisplayBook</servlet-name>
         <servlet-class>bookshop.web.DisplayBookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddToCart</servlet-name>
+        <servlet-class>bookshop.web.AddToCartServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -27,6 +31,11 @@
     <servlet-mapping>
         <servlet-name>DisplayBook</servlet-name>
         <url-pattern>/store/book</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddToCart</servlet-name>
+        <url-pattern>/store/addtocart</url-pattern>
     </servlet-mapping>
 
     <filter-mapping>

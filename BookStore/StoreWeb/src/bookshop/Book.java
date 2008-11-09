@@ -1,10 +1,12 @@
 package bookshop;
 
+import static bookshop.Pounds.inPounds;
+
 public class Book {
-    private String title;
-    private String author;
-    private String description;
-    private Pounds price;
+    private String title = "";
+    private String author = "";
+    private String description = "";
+    private Pounds price = inPounds(0);
     private int id;
 
     public Book(int id) {
