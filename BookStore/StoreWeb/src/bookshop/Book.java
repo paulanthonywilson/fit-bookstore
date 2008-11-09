@@ -55,6 +55,10 @@ public class Book {
         return price;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public String getImage() {
         return ("/book-images/" + title + ".jpg").toLowerCase().replace(' ', '_').replace("'", "");
     }

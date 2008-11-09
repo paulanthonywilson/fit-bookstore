@@ -33,7 +33,7 @@ div.book img {
     margin: 3em 1em 0 0;
 }
 
-.displaybook h1 {
+h1 {
     font-weight: bold;
     font-size: 150%;
 }
@@ -44,5 +44,43 @@ div.book img {
 }
 
 em{
+    font-weight: bolder;
+}
+
+a, a:visited{
+   color:blue;
+}
+
+table.cart{
+    width: 55em;
+
+}
+
+table.cart th{
+    font-weight:bold;
+    font-size: 100%;
+    text-align:left;
+    padding-left: 1em;
+}
+
+table.cart .title{
+   width: 30em;
+   text-align: left;
+}
+
+table.cart .author{
+    width: 20em;
+    text-align: left;
+}
+
+table.cart .price{
+    width: 5em;
+    text-align: right;
+
+    
+}
+
+table.cart tr.total td{
+    text-align: right;
     font-weight: bolder;
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="cart">
-    <p>${application.cart.summary}</p>
+    <p><a href="/store/displaycart">${application.cart.summary}</a> </p>
 </div>
 <div id="page">
     <jsp:include page="${page}"/>
