@@ -15,30 +15,30 @@
 
         <p>
             <label class="required" for="full_name">Full Name</label>
-            <input id="full_name" type="text" name="full_name" value="${checkout.full_name}" size="30"/>
+            <input id="full_name" type="text" name="full_name" value="${checkout.customer.full_name}" size="30"/>
         </p>
 
         <p>
             <label class="required" for="email">Email</label>
-            <input id="email" type="text" name="email" value="${checkout.email}" size="30"/>
+            <input id="email" type="text" name="email" value="${checkout.customer.email}" size="30"/>
         </p>
 
         <p>
             <label class="required" for="address">Address</label>
-            <input id="address" type="text" name="address" value="${checkout.address}" size="40"/>
+            <input id="address" type="text" name="address" value="${checkout.customer.address}" size="40"/>
             <br/>
-            <input id="address2" type="text" name="address" value="${checkout.address2}" size="40"/>
+            <input id="address2" type="text" name="address" value="${checkout.customer.address2}" size="40"/>
         </p>
 
         <div class="side_by_side">
             <p>
                 <label class="required" for="address">Postal Town/City</label>
-                <input id="town" type="text" name="town" value="${checkout.town}" size="16"/>
+                <input id="town" type="text" name="town" value="${checkout.customer.town}" size="16"/>
             </p>
 
             <p>
                 <label class="required" for="postcode">Post code</label>
-                <input id="postcode" type="text" name="postcode" value="${checkout.postcode}" size="16"/>
+                <input id="postcode" type="text" name="postcode" value="${checkout.customer.postcode}" size="16"/>
             </p>
         </div>
 
