@@ -3,16 +3,16 @@ html {
     text-align: left;
 }
 
-
-#page{
+#page {
     clear: both;
+    padding: 2em 1em;
 }
 
-
-#cart{
-    float:right;
+#cart {
+    float: right;
     margin: 1em 1em 2em;
 }
+
 div.book {
     float: left;
     height: 220px;
@@ -38,49 +38,105 @@ h1 {
     font-size: 150%;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 125%;
+
+}
+
+
+
 .displaybook img.book {
     float: right;
     margin: 0 0 0 3em
 }
 
-em{
+em {
     font-weight: bolder;
 }
 
-a, a:visited{
-   color:blue;
+#form.checkout {
+    float: left;
 }
 
-table.cart{
+a, a:visited {
+    color: blue;
+}
+
+table.cart {
     width: 55em;
+    margin: 1em 0;
 
 }
 
-table.cart th{
-    font-weight:bold;
+table.cart th {
+    font-weight: bold;
     font-size: 100%;
-    text-align:left;
+    text-align: left;
     padding-left: 1em;
 }
 
-table.cart .title{
-   width: 30em;
-   text-align: left;
+table.cart .title {
+    width: 30em;
+    text-align: left;
 }
 
-table.cart .author{
+table.cart .author {
     width: 20em;
     text-align: left;
 }
 
-table.cart .price{
+table.cart .price {
     width: 5em;
     text-align: right;
 
-    
 }
 
-table.cart tr.total td{
+table.cart tr.total td {
     text-align: right;
     font-weight: bolder;
 }
+
+a#continue_shopping {
+    float: left;
+}
+
+a#checkout {
+    position: absolute;
+    left: 675px;
+}
+
+form#checkout {
+    text-align: left;
+    background: pink;
+}
+
+form#checkout .group {
+    background: #DDDDDD;
+    padding: 5px 1em;
+    margin: 5px 1em;
+}
+
+form#checkout label {
+    display: block;
+    margin: 5px 0 5px 2em;
+}
+
+form#checkout input {
+    margin-left: 2em;
+}
+
+form#checkout select {
+    margin-left: 2em;
+}
+
+.side_by_side{
+    float:left;
+    width: 100%;
+}
+
+.side_by_side p{
+    float: left;
+}
+
+

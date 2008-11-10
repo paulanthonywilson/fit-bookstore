@@ -25,6 +25,10 @@
         <servlet-name>DisplayCart</servlet-name>
         <servlet-class>bookshop.web.DisplayCartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Checkout</servlet-name>
+        <servlet-class>bookshop.web.CheckoutServlet</servlet-class>
+    </servlet>
 
 
     <servlet-mapping>
@@ -44,6 +48,10 @@
     <servlet-mapping>
         <servlet-name>DisplayCart</servlet-name>
         <url-pattern>/store/displaycart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Checkout</servlet-name>
+        <url-pattern>/store/checkout</url-pattern>
     </servlet-mapping>
 
     <filter-mapping>
