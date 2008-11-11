@@ -6,9 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class DisplayCartServlet extends BookStoreServlet {
+public class DisplayCheckoutConfirmedServlet extends BookStoreServlet{
     protected String service(HttpServletRequest request, HttpServletResponse response, BookStoreApplication storeApplication) throws IOException {
-        request.setAttribute("cart", storeApplication.getCart());
-        return "display_cart.jsp";
+        return "checkout_confirmed.jsp";
     }
 }

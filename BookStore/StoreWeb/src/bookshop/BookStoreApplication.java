@@ -3,9 +3,10 @@ package bookshop;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookStoreApplication  {
-    private List<Book> allBooks = new ArrayList<Book>() ;
+public class BookStoreApplication {
+    private List<Book> allBooks = new ArrayList<Book>();
     private Cart cart = new Cart();
+    private Checkout checkout = new Checkout();
 
     public void addBook(Book book) {
         allBooks.add(book);
@@ -25,5 +26,18 @@ public class BookStoreApplication  {
 
     public Cart getCart() {
         return cart;
+    }
+
+    public Checkout getCheckout() {
+        return checkout;
+    }
+
+    public void addBookToCart(int id) {
+        cart.add(findBookById(id));
+    }
+
+    public void confirmOrder() {
+        checkout.setConfirmedOrder(cart);
+        cart = new Cart();
     }
 }

@@ -3,19 +3,14 @@
 
 <h1>Checkout</h1>
 
-<jsp:include page="cart_contents.jsp"/>
-
-<a href="/store/catalogue">Continue shopping</a>
-
-<hr/>
 <form action="/store/checkout" method="POST" id="checkout">
 
     <div id="name_and_address" class="group">
         <h2>Name and address</h2>
 
         <p>
-            <label class="required" for="full_name">Full Name</label>
-            <input id="full_name" type="text" name="full_name" value="${checkout.customer.full_name}" size="30"/>
+            <label class="required" for="fullName">Full Name</label>
+            <input id="fullName" type="text" name="fullName" value="${checkout.customer.fullName}" size="30"/>
         </p>
 
         <p>
@@ -27,7 +22,7 @@
             <label class="required" for="address">Address</label>
             <input id="address" type="text" name="address" value="${checkout.customer.address}" size="40"/>
             <br/>
-            <input id="address2" type="text" name="address" value="${checkout.customer.address2}" size="40"/>
+            <input id="address2" type="text" name="address2" value="${checkout.customer.address2}" size="40"/>
         </p>
 
         <div class="side_by_side">
@@ -49,24 +44,29 @@
         <h2>Credit card</h2>
 
         <p>
-            <label class="required" for="address">Number</label>
-            <input id="credit_card_number" type="text" name="address" value="${checkout.creditCard.number}"
+            <label class="required" for="credit_card_number">Number</label>
+            <input name="credit_card_number" id="credit_card_number" type="text" name="address" value="${checkout.creditCard.number}"
                    size="20"/>
         </p>
 
         <div class="side_by_side">
             <p>
-                <label class="required" for="address">Security code</label>
-                <input id="credit_card_security_code" type="text" name="address"
+                <label class="required" for="credit_card_security_code">Security code</label>
+                <input name="credit_card_security_code" id="credit_card_security_code" type="text" name="address"
                        value="${checkout.creditCard.securityCode}" size="3"/>
             </p>
 
             <p>
-                <label class="required" for="address">Expiry (MMYY)</label>
-                <input id="credit_card_expiry" type="text" name="address" value="${checkout.creditCard.expiry}"
+                <label class="required" for="credit_card_expiry">Expiry (MMYY)</label>
+                <input name="credit_card_expiry" id="credit_card_expiry" type="text" name="address" value="${checkout.creditCard.expiry}"
                        size="3"/>
             </p>
         </div>
-        <p>&nbsp;</p>
+        <input type="submit" value="Confirm order"/>
+         <p>&nbsp;</p>
     </div>
-</form>
+ </form>
+
+<jsp:include page="cart_contents.jsp"/>
+
+<a href="/store/catalogue">Continue shopping</a>

@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.util.Arrays.asList;
+
 public class TestBookStoreApplication {
     private BookStoreApplication testee;
 
@@ -26,4 +28,22 @@ public class TestBookStoreApplication {
        testee.findBookById(3);
 
     }
+
+    @Test
+    public void addBookToCart() throws Exception {
+        testee.addBookToCart(1);
+        assertEquals(1, testee.getCart().getBookCount());
+        assertEquals(asList(testee.findBookById(1)), testee.getCart().getBooks());
+    }
+
+    @Test
+    public void confirmingOrderEmptiesCart() throws Exception {
+        testee.addBookToCart(2);
+        testee.confirmOrder();
+        assertEquals(0, testee.getCart().getBookCount());
+        assertEquals(asList(testee.findBookById(2)), testee.getCheckout().getConfirmedOrder().getBooks());
+
+    }
+
+
 }

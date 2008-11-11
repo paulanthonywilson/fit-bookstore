@@ -3,3 +3,5 @@ out
 apache-tomcat-6.0.18/
 lib
 add_to_cart
+.DS_Store
+checkout

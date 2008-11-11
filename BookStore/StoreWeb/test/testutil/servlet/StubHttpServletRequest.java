@@ -50,13 +50,18 @@ public class StubHttpServletRequest {
         return values.get(0);
     }
 
-    public void addParameter(String name, String value) {
+    public StubHttpServletRequest addParameter(String name, String value) {
         List<String> values = parameters.get(name);
         if (values == null) {
            values = new ArrayList<String>();
             parameters.put(name, values);
         }
         values.add(value);
+        return this;
+    }
+
+    public StubHttpServletRequest andParameter(String name, String value){
+        return addParameter(name, value);
     }
 
 

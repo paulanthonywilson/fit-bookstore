@@ -5,12 +5,12 @@ html {
 
 #page {
     clear: both;
-    padding: 2em 1em;
+    padding: 1em 1em;
 }
 
 #cart {
     float: right;
-    margin: 1em 1em 2em;
+    margin: 1em 1em 1em;
 }
 
 div.book {
@@ -43,6 +43,10 @@ h2 {
     font-size: 125%;
 
 }
+
+
+
+
 
 
 
@@ -108,13 +112,12 @@ a#checkout {
 
 form#checkout {
     text-align: left;
-    background: pink;
 }
 
 form#checkout .group {
     background: #DDDDDD;
     padding: 5px 1em;
-    margin: 5px 1em;
+    margin: 1em;
 }
 
 form#checkout label {
@@ -137,6 +140,20 @@ form#checkout select {
 
 .side_by_side p{
     float: left;
+}
+
+#order_confirmation{
+    text-align:left;
+}
+
+#order_confirmation p{
+    margin: 1em;
+    
+}
+
+#order_confirmation li{
+    list-style-type:disc;
+    margin-left:2em;
 }
 
 
