@@ -1,7 +1,0 @@
-package com.cogenttps.common.testing;
-
-/**
- */
-public class TooTiredToDanceException extends Exception
-{
-}
