@@ -64,6 +64,7 @@
     </orderEntry>
     <orderEntry type="library" name="jstl" level="project" />
     <orderEntry type="library" name="junit" level="project" />
+    <orderEntry type="module" module-name="dummyproxy" />
     <orderEntryProperties />
   </component>
 </module>
