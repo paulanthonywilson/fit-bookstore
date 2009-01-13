@@ -1,6 +1,6 @@
 package testutil.servlet;
 
-import static testutil.DummyProxy.dummy;
+import static com.merecomplexities.dummyproxy.DummyProxy.dummy;
 
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletContext;

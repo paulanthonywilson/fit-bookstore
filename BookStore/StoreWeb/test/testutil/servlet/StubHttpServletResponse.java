@@ -1,6 +1,6 @@
 package testutil.servlet;
 
-import testutil.DummyProxy;
+import com.merecomplexities.dummyproxy.DummyProxy;
 
 import javax.servlet.http.HttpServletResponse;
 

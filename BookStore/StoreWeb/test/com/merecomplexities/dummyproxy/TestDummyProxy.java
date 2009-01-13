@@ -1,4 +1,4 @@
-package testutil;
+package com.merecomplexities.dummyproxy;
 
 import static org.junit.Assert.*;
 import org.junit.Before;

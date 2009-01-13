@@ -1,7 +1,7 @@
 package testutil.servlet;
 
+import static com.merecomplexities.dummyproxy.DummyProxy.dummy;
 import static org.junit.Assert.assertNotNull;
-import static testutil.DummyProxy.dummy;
 
 import javax.servlet.*;
 import java.io.IOException;

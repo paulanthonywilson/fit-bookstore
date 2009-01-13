@@ -1,10 +1,10 @@
 package testutil.servlet;
 
-import testutil.DummyProxy;
+import com.merecomplexities.dummyproxy.DummyProxy;
 
 import javax.servlet.http.HttpSession;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 public class StubHttpSession {
     private Map<String, Object> attributes = new HashMap<String, Object>();
