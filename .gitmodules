@@ -1,0 +1,3 @@
+[submodule "BookStore/dummyproxy"]
+	path = BookStore/dummyproxy
+	url = git://github.com/paulanthonywilson/dummy-proxy.git
